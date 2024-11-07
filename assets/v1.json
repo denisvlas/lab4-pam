@@ -1,0 +1,161 @@
+{
+  "banners": [
+    {
+      "title": "Summer Sale",
+      "description": "Enjoy up to 50% off on all summer products!",
+      "image": "https://example.com/summer-sale.jpg"
+    },
+    {
+      "title": "New Arrivals",
+      "description": "Check out the latest trends in our collection.",
+      "image": "https://example.com/new-arrivals.jpg"
+    },
+    {
+      "title": "Holiday Discounts",
+      "description": "Get amazing discounts on holiday gifts and more!",
+      "image": "https://example.com/holiday-discounts.jpg"
+    },
+    {
+      "title": "Exclusive Offer",
+      "description": "Sign up now and get an exclusive 10% discount.",
+      "image": "https://example.com/exclusive-offer.jpg"
+    }
+  ],
+  "categories": [
+    {
+      "title": "Dentistry",
+      "path": "icons/tooth.svg",
+      "color": "#DC9497"
+    },
+    {
+      "title": "Cardiology",
+      "path": "icons/heart.svg",
+      "color": "#93C19E"
+    },
+    {
+      "title": "Pulmonology",
+      "path": "icons/lungs.svg",
+      "color": "#F5AD7E"
+    },
+    {
+      "title": "General",
+      "path": "icons/general.svg",
+      "color": "#ACA1CD"
+    },
+    {
+      "title": "Neurology",
+      "path": "icons/brain.svg",
+      "color": "#ACA1CD"
+    },
+    {
+      "title": "Gastroenterology",
+      "path": "icons/stomach.svg",
+      "color": "#89CCDB"
+    },
+
+    {
+      "title": "Vaccination",
+      "path": "icons/vaccine.svg",
+      "color": "#89CCDB"
+    },
+    {
+      "title": "Laboratory",
+      "path": "icons/lab.svg",
+      "color": "#DEB6B5"
+    }
+  ],
+  "nearby_centers": [
+    {
+      "image": "https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "title": "Medical Center 1",
+      "location_name": "Location 1",
+      "review_rate": 4.1,
+      "count_reviews": 102,
+      "distance_km": 1.1,
+      "type": "General Practice",
+      "distance_minutes": 6
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "title": "Medical Center 2",
+      "location_name": "Location 2",
+      "review_rate": 4.2,
+      "count_reviews": 104,
+      "distance_km": 1.1,
+      "type": "Multi-Specialty",
+      "distance_minutes": 7
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1504813184591-01572f98c85f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+      "title": "Medical Center 3",
+      "location_name": "Location 3",
+      "review_rate": 4.3,
+      "count_reviews": 106,
+      "distance_km": 1.1,
+      "type": "Family Medicine",
+      "distance_minutes": 8
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80",
+      "title": "Medical Center 4",
+      "location_name": "Location 4",
+      "review_rate": 4.4,
+      "count_reviews": 108,
+      "distance_km": 1.2,
+      "type": "Urgent Care",
+      "distance_minutes": 9
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1538108149393-fbbd81895907?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2128&q=80",
+      "title": "Medical Center 5",
+      "location_name": "Location 5",
+      "review_rate": 4.5,
+      "count_reviews": 110,
+      "type": "Pediatrics",
+      "distance_km": 1.2,
+      "distance_minutes": 10
+    }
+  ],
+  "doctors": [
+    {
+      "image": "https://s3-alpha-sig.figma.com/img/ab8e/d8d0/b0db1e98ab7f1a31afba13769f282033?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SQkz7m9SlXaS2YVahm1DuekIKIaSr~8MJOs3sdgIYQOf41k4rPqUgO-m1FhMt-tELbRqxWn~WIBY-q8QadL51O4GEzoF0Xm3K8KGGgzq~PLR6WWepnwyAtathjr3p5sLL4o9k74CiQNbJE9WovWen9OINtheqKNQHCFFktN~cJvwU43gtfdwydQOnHfU9qKQfxnS3q1nU2XCcQ4L~5R2sCRJsInlVx73bnY3Xhta01STyUHZWc5LbXWNy~dCXSUmFTFEwq6KkRo5-0mZuJC-PFRq3d4lmuCodksf9haeze8MpPwQQoerxCZp3V~khrI2lRYipfCrPRtKkpbbqHR-Gg__",
+      "full_name": "Dr. Full  1",
+      "type_of_doctor": "Cardiologist",
+      "location_of_center": "Health Center 1, USA",
+      "review_rate": 4.1,
+      "reviews_count": 53
+    },
+    {
+      "image": "https://s3-alpha-sig.figma.com/img/eda2/ee92/bffb300537aa46caf4c65351a0a20dde?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qsqE0tFmN7KPQHHQsbeAoAHRLt7wIBQt5ekDvgd0g3~qORlty0WTvMIVArqiS-bC2mMNJ6mszTtOG9EjwzEM8BheoHKmi7zTvndMZjieWoq6fVYrfZCNwKPbMIwne-yR583uEOG2n1xsjOKrGmV8vNJMLRQs8CLWZ1D-~O0EUFjGKn9QtMXzHJmiBtHeGBBVsiCI9ZMZd9fEMJfVIgp1~KN6LOQTO~xFVFHYkcA15vKLXLOc6pZJ1EUcp8NOoO74AmeS9C2W7Rqnhepy0tZ7fOEvSN25XA6mwTygelq4xcHBgowAYaqvXxdOVitscoUog8d68rsuOL~z5qJi25dlJg__",
+      "full_name": "Dr. Full Name 2",
+      "type_of_doctor": "Pediatrician",
+      "location_of_center": "Health Center 2, USA",
+      "review_rate": 4.2,
+      "reviews_count": 56
+    },
+    {
+      "image": "https://s3-alpha-sig.figma.com/img/86b5/e652/0800f3ee36c944ded270e36c1763aaed?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fmNP5EthbaUEzm6XBp-b8-sg-wyU7kxEOWkt5oRJ2Uwc4eZp7pLzBgbNMOSljPI1lpFAhDJajRz8n-ZzZiKxV95LoKoB092cb0x0FbsS53f9bZN7cQjikDhVDT4JLRxbkqhWf~2oyXVsiZ1DkHFRFoYqmcob52WD20BsjJNyfmPBlg6NRj1GyCtI7pxf4JjDsP1hxh45ixIyf59RzujQ-6CZuOzJ1tB4r5177Yuc9uAJkIUVn-I4AegR1lUanwRLZD1j1L8khw3tuduJlt7nyGZ4uYGmMzlghgXt2Jo6Hk6Xk7PR5MqO7NFO6eUInyHuROrLFpAGNVJkCneW2RcN-g__",
+      "full_name": "Dr. Full Name 3",
+      "type_of_doctor": "Dermatologist",
+      "location_of_center": "Health Center 3, USA",
+      "review_rate": 4.3,
+      "reviews_count": 59
+    },
+    {
+      "image": "https://s3-alpha-sig.figma.com/img/f501/868c/d62449885187cf0eb057a3fdee941589?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CmfXombWj8bn2gD8~5aJQTqNPlQw7gSiEMQNZpvMjHFgTnCI~4jLOuz5Cq7r90XyJvLX0x94Zq8aqyJaWM5o6QBk4HAaXF-4SjZRASrnCw0HIYtfBME5nlm2wGIcoW1kl9M38CZlN-yc9Ejsdi8JMER4mIJkMfbm4TGtBoamdj3gbVRLA7uEcn8Tdl6CpJUW~yZY6knyKxI6OhP3PuLjDpl9Ahht2ln2PCaBdmLBuTJgXWD9NNIQA3g0~ilofAIYPzM696-~YX4HpX34fLgV3lHqL2IkPiC8n2cBPrR9R3SMNI8kgK1Z8PvDETA94klka19acvkBfPPiUsjuK5ow0w__",
+      "full_name": "Dr. Full Name 4",
+      "type_of_doctor": "Orthopedic Surgeon",
+      "location_of_center": "Health Center 4, USA",
+      "review_rate": 4.4,
+      "reviews_count": 62
+    },
+    {
+      "image": "https://s3-alpha-sig.figma.com/img/177e/81a4/cbbe443ae4d16ccaa140e5590a4e0a76?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SaK7Ghk29A50Zep5W57m4I-OTg24WIhIoYXi1vudmCUp0hJsYV3y~g8e4Cpj7t1lL9hXmHW~IsgtSwWpMqBvGDQ7P48fddJ9vqn6u5~oQL-jRdl4C8SjCJhFa7Ln3Tc0qhrWGn0eUQrUb0hKEvvR7SjFbwZBqRGQrEwPQ~ddv4jtEaRRigx1G-V7SQlJgS71gsO5pt8ReWmdtpldf18UuSRYgjf9Zb1NjJeHVjIqnMpn7M4z~9pxH9ReW9RtUcd-Ot30qX7U-LA5ny8BIdtJaZp8XcW4tRdQ4yVO6VdbzXkMVJiQOw2vpfYnTTgTVCjMceCtZvpzfyK4etHepTtU8w__",
+      "full_name": "Dr. Full Name 5",
+      "type_of_doctor": "Dentist",
+      "location_of_center": "Health Center 5, USA",
+      "review_rate": 4.5,
+      "reviews_count": 65
+    }
+  ]
+}

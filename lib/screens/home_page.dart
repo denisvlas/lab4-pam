@@ -1,10 +1,12 @@
-import 'package:doctor_appointment/constants/clinics.dart';
-import 'package:doctor_appointment/constants/doctor_list.dart'; // Importă DoctorList
+import 'package:doctor_appointment/widgets/DoctorCard.dart'; // Importă DoctorList
+import 'package:doctor_appointment/models/doctor.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-import '../widgets/category_item.dart';
-import '../widgets/medical_center.dart';
-import '../constants/categories.dart';
+import '../widgets/CategoryItem.dart';
+import '../widgets/MedicalCenterCard.dart';
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
+import '../models/category.dart'; // Import the Category model
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,33 +16,48 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final PageController _pageController = PageController(viewportFraction: 0.9);
-  int _currentPage = 0;
-  Timer? _timer;
+  List<Category> categories = [];
+  List<Doctor> doctors = [];
+  List<MedicalCenter> clinics = [];
 
   @override
   void initState() {
     super.initState();
-    _timer = Timer.periodic(Duration(seconds: 5), (Timer timer) {
-      if (_currentPage < 4) {
-        _currentPage++;
-      } else {
-        _currentPage = 0;
-      }
+    loadCategories();
+    loadDoctors();
+    loadClinics();
+  }
 
-      _pageController.animateToPage(
-        _currentPage,
-        duration: Duration(milliseconds: 350),
-        curve: Curves.easeIn,
-      );
+  Future<void> loadClinics() async {
+    final String jsonString = await rootBundle.loadString('assets/v1.json');
+    final Map<String, dynamic> jsonData = json.decode(jsonString);
+    final List<dynamic> clinicsJson = jsonData['nearby_centers'];
+
+    setState(() {
+      clinics =
+          clinicsJson.map((json) => MedicalCenter.fromJson(json)).toList();
     });
   }
 
-  @override
-  void dispose() {
-    super.dispose();
-    _timer?.cancel();
-    _pageController.dispose();
+  Future<void> loadCategories() async {
+    final String jsonString = await rootBundle.loadString('assets/v1.json');
+    final Map<String, dynamic> jsonData = json.decode(jsonString);
+    final List<dynamic> categoriesJson = jsonData['categories'];
+
+    setState(() {
+      categories =
+          categoriesJson.map((json) => Category.fromJson(json)).toList();
+    });
+  }
+
+  Future<void> loadDoctors() async {
+    final String jsonString = await rootBundle.loadString('assets/v1.json');
+    final Map<String, dynamic> jsonData = json.decode(jsonString);
+    final List<dynamic> doctorsJson = jsonData['doctors'];
+
+    setState(() {
+      doctors = doctorsJson.map((json) => Doctor.fromJson(json)).toList();
+    });
   }
 
   @override
@@ -157,7 +174,8 @@ class _HomePageState extends State<HomePage> {
                   return CategoryItem(
                     path: category.path,
                     label: category.label,
-                    color: category.color,
+                    color: Color(
+                        int.parse(category.color.replaceAll('#', '0xFF'))),
                   );
                 },
               ),
@@ -189,24 +207,23 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 10),
 
-              // Carousel of Medical Centers
               SizedBox(
                 height: 350,
-                child: PageView.builder(
-                  controller: _pageController,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
                   itemCount: clinics.length,
                   itemBuilder: (context, index) {
                     final clinic = clinics[index];
                     return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 5),
                       child: MedicalCenter(
-                        name: clinic['name'],
-                        address: clinic['address'],
-                        rating: clinic['rating'],
-                        reviews: clinic['reviews'],
-                        distance: clinic['distance'],
-                        type: clinic['type'],
-                        imageUrl: clinic['imageUrl'],
+                        title: clinic.title,
+                        image: clinic.image,
+                        countReviews: clinic.countReviews,
+                        distanceKm: clinic.distanceKm,
+                        locationName: clinic.locationName,
+                        reviewRate: clinic.reviewRate,
+                        type: clinic.type,
                       ),
                     );
                   },
@@ -239,9 +256,16 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               const SizedBox(height: 10),
-              
+
               // Doctor List Widget
-              DoctorList(),
+
+              ListView(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                children: doctors.map((doctor) {
+                  return DoctorCard(doctor: doctor);
+                }).toList(),
+              ),
             ],
           ),
         ),
