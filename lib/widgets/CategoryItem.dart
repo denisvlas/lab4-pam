@@ -22,7 +22,7 @@ class CategoryItem extends StatelessWidget {
               shape: BoxShape.rectangle,
               borderRadius: BorderRadius.circular(10),
             ),
-            child: SvgPicture.asset(path, width: 24.0, height: 24.0),
+            child: SvgPicture.asset("assets/$path", width: 24.0, height: 24.0),
           ),
         ),
         SizedBox(height: 8),
