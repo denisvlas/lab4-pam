@@ -1,12 +1,13 @@
-import 'package:doctor_appointment/widgets/DoctorCard.dart'; // Importă DoctorList
-import 'package:doctor_appointment/models/doctor.dart';
+import 'package:doctor_appointment/domain/entities/doctor.dart';
+import 'package:doctor_appointment/presentation/widgets/DoctorCard.dart'; // Importă DoctorList
+import 'package:doctor_appointment/data/models/doctor.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import '../widgets/CategoryItem.dart';
 import '../widgets/MedicalCenterCard.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
-import '../models/category.dart'; // Import the Category model
+import 'package:doctor_appointment/data/models/category.dart'; // Import the Category model
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -56,7 +57,7 @@ class _HomePageState extends State<HomePage> {
     final List<dynamic> doctorsJson = jsonData['doctors'];
 
     setState(() {
-      doctors = doctorsJson.map((json) => Doctor.fromJson(json)).toList();
+      doctors = doctorsJson.map((json) => DoctorModel.fromJson(json)).toList();
     });
   }
 

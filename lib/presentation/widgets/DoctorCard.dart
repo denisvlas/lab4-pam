@@ -1,5 +1,6 @@
+import 'package:doctor_appointment/domain/entities/doctor.dart';
 import 'package:flutter/material.dart';
-import '../models/doctor.dart';
+import '../../data/models/doctor.dart';
 
 class DoctorCard extends StatelessWidget {
   final Doctor doctor;
